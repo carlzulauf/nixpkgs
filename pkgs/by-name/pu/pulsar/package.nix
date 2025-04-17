@@ -13,8 +13,10 @@
   dbus,
   expat,
   gdk-pixbuf,
+  gsettings-desktop-schemas,
   glib,
   gtk3,
+  gtk4,
   libgbm,
   nss,
   nspr,
@@ -55,8 +57,10 @@ let
     dbus
     expat
     gdk-pixbuf
+    gsettings-desktop-schemas
     glib
     gtk3
+    gtk4
     libsecret
     libgbm
     nss
@@ -101,7 +105,7 @@ stdenv.mkDerivation {
   ];
 
   buildInputs = [
-    gtk3
+    gsettings-desktop-schemas glib gtk3 gtk4
     xorg.libxkbfile
   ];
 
