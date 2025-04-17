@@ -123,6 +123,7 @@ stdenv.mkDerivation {
 
   preFixup =
     ''
+      gappsWrapperArgsHook
       gappsWrapperArgs+=(
         # needed for gio executable to be able to delete files
         --prefix "PATH" : "${lib.makeBinPath [ glib ]}"
